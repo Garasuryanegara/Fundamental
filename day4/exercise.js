@@ -87,8 +87,3 @@ let str= 'Halo Bandung Apa Kabar'
 
 let splitstr = str.split(' ')
 console.log(splitstr);
-
-function test(...abc) {
-    console.log(test);
-}
-test(1,2,3,4)
