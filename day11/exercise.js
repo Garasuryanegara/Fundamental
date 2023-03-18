@@ -57,6 +57,17 @@ function convert2(string) {
 }
 convert2("bbb");
 
+console.log("===different solution===");
+
+let column = "BBB";
+let arrAlfa = "abcdefghijklmnopqrstuvwxyz";
+
+console.log(
+  column.split("").reduce((prev, curr) => {
+    return prev * 26 + parseInt(curr, 36) - 9;
+  }, 0)
+);
+
 //2. Given a non-empty array of integers nums, every element appears twice except for one. Find
 //   that single one.
 console.log("==========No.2==========");
@@ -66,27 +77,21 @@ function single(arrInt = []) {
   for (let i = 0; i < arrInt.length; i++) {
     let check = arrInt.filter((val) => val == arrInt[i]);
     if (check.length < 2) {
-      arrRes.push(check);
+      arrRes.push(...check);
     }
   }
-  return arrRes.join(",");
+  return arrRes;
 }
 console.log(single([1, 4, 2, 4, 6, 1, 7]));
 
 console.log("===different solution===");
 
-function unique(arr) {
-  arrUni = [];
-  arr.map((value) => {
-    if (value == arr) {
-      if (value < 2) {
-        arrUni.push(value);
-      }
-    }
-  });
-  return arrUni;
+function findSingle(arr = []) {
+  arr.sort();
+  return arr.filter((val, idx) => arr[idx - 1] != val && arr[idx + 1] != val);
 }
-console.log(unique([1, 2, 1, 2, 3]));
+console.log(findSingle([1, 1, 2, 2, 3, 3, 4, 5]));
+
 //3. Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 console.log("==========No.3==========");
 
@@ -128,8 +133,12 @@ console.log("===different solution===");
 let temp1 = 0;
 let temp2 = 1;
 function manyWays2(num) {
-  //   if (num == 0) return 0;
+  if (num == 0) return 0;
   //   else if (num == 1) return 1;
   return manyWays2(num - 1) + manyWays(num - 2) + 1;
 }
-console.log(manyWays2(2));
+console.log(manyWays2(5));
+
+//5
+// m(4), [m(3) m(2)], [m(2), m(1)]
+//m(3)

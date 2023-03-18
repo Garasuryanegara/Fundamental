@@ -1,0 +1,11 @@
+1. arrow function tidak perlu pakai return
+2. jika pakai return maka ditulis di dalam {}
+3. function tidak dengan return maka hsasilnya undefined
+4. pada switch jika tidak ada break pada case maka akan
+   berlanjut ke case berikutnya
+5. undefined *+-/ number = NaN
+6. undefined +-*/ undefined =NaN
+7. "" + 2 = "2"
+8. "" - 2 = -2
+9. "" * 2 = 0
+10. "" / 2 = 0
