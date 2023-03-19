@@ -96,9 +96,8 @@ console.log(entries[1][1]);
 
 let txt = "aku sedang mencuci ayam";
 console.log(txt.slice(11, 18));
-console.log(txt.splice(11, 7));
 
-let txt2 = txt.split("");
+let txt2 = txt.split(" ");
 console.log(txt2);
 console.log(txt2.splice(0, 1));
 console.log(txt2);
@@ -109,3 +108,56 @@ console.log(txt2);
 // for (val of txt2) {
 //   console.log(val);
 // }
+
+switch (3 % 3 == 1) {
+  case 0:
+    console.log("yess");
+    break;
+  default:
+    console.log("noo");
+    break;
+}
+
+let bool = Boolean(3 % 3) == 0;
+console.log(bool);
+
+let arrr = [1, 3, 5, 6, 2, 4, 8, 10, 20];
+console.log(arrr.sort((a, b) => a - b));
+
+// console.log(undefined || "string");
+
+console.log(Boolean(3 % 3 == 1));
+
+// let yy = 10;
+// while (yy < 20) {
+//   console.log(yy);
+//   yy = +2;
+// }
+
+// let xx = 10;
+
+// do {
+//   console.log(xx);
+//   xx++;
+// } while (xx < 5);
+
+let a = 10;
+let b = 20;
+let c = (a += b);
+let d = (a = +b);
+
+console.log(c);
+console.log(d);
+
+console.log(d + 10);
+
+for (let i = 1; i <= 5; i++) {
+  ++i;
+  console.log(i);
+}
+
+let num = [1, 2, 3, 4, 5, 6, 7];
+let each = num.forEach((val, index) =>
+  console.log(`${val} adalah index ke ${index}`)
+);
+// console.log(each);

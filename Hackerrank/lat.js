@@ -38,3 +38,47 @@ function lowerUpper(string) {
   return `${lower},${upper}`;
 }
 console.log(lowerUpper("Hello Bitch!"));
+
+function oddEven(arr) {
+  let odd = 0;
+  let even = 0;
+  arr.map((val) => {
+    if (val % 2 == 0) {
+      odd++;
+    } else {
+      even++;
+    }
+  });
+  console.log(odd, even);
+}
+oddEven([10, 11, 12, 13]);
+
+function sumLetter(s) {
+  let alpha = "0abcdefghijklmnopqrstuvwxyz";
+  let alphaSplit = alpha.split("");
+  let sSplit = s.toLowerCase().split("");
+  let arrSum = sSplit.map((val) => alphaSplit.indexOf(val));
+  let sum = arrSum.reduce((a, b) => a + b);
+  console.log(sum);
+}
+sumLetter("Purwadhika");
+
+function conversionMoney(number) {}
+
+let number = "150000";
+let arr = [
+  "100000",
+  "75000",
+  "50000",
+  "20000",
+  "10000",
+  "5000",
+  "2000",
+  "1000",
+];
+let result = [];
+for (let i = 0; i < arr.length; i++) {
+  let convert = 150000 % arr[i];
+  result.push(convert);
+}
+console.log(result);
