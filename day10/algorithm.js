@@ -42,10 +42,12 @@ function selectionSort(arr) {
   let min = [];
   for (let i = 0; i < arr.length; i++) {
     min = i;
+    // min = 0
     for (let j = i + 1; j < arr.length; j++) {
-      if (arr[j] < arr[min]) min = j;
+      //j = 1,j = 2,j = 3
+      if (arr[j] < arr[min]) min = j; // 72 < 29, 98 < 29, 13 < 29
     }
-    if (min != i) [arr[i], arr[min]] = [arr[min], arr[i]];
+    if (min != i) [arr[i], arr[min]] = [arr[min], arr[i]]; // 0 != 0
   }
   return arr;
 }

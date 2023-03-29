@@ -161,3 +161,63 @@ let each = num.forEach((val, index) =>
   console.log(`${val} adalah index ke ${index}`)
 );
 // console.log(each);
+
+console.log(0 === "0");
+
+let z = 0.1 + 0.2;
+console.log(parseFloat("3.3"));
+console.log(String.raw`hellotwitter\nworld`);
+
+isTrue = false == [];
+isFalse = 3 == [2, 3];
+console.log(isTrue + isFalse);
+
+console.log(Number("1") - 1 == 0);
+
+console.log(new Array(5).toString());
+
+function aaa() {
+  return;
+  {
+    test: 1;
+  }
+}
+console.log(typeof aaa());
+
+function withoutReturn(x, y) {
+  const sum = x + y;
+  console.log(sum);
+}
+console.log(withoutReturn(1, 2));
+
+const str1 = "hello";
+const str2 = "world";
+const str3 = "hello world foo";
+console.log(str1.concat(" ", str2)); // "hello world"
+console.log(str1.charAt(4));
+console.log(str2.indexOf("o"));
+console.log(str2.match("world"));
+console.log(str3.slice(12, 15));
+
+console.log(typeof String(NaN));
+let data = [1, 2, 3, () => [{ m: "n" }]];
+// console.log(data[3][0].m);
+// let obj = { m: "n" };
+// console.log(obj.u);
+function m() {
+  const n = "l";
+}
+// console.log(n);
+
+// n(8);
+const n = function (pa) {
+  console.log(2 * 2);
+};
+console.log(Boolean(["i"]));
+
+const sentence = "Learn Javascript at Purwadhika";
+// sentence.replace("a", "o");
+sentence.split(" ");
+console.log(sentence);
+// sentence.reverse();
+// console.log(sentence);
